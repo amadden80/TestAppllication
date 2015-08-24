@@ -1,0 +1,18 @@
+
+
+<form action="/weees" method="post">
+  <input type="text" name="weee[username]" placeholder="... who?">
+  <input type="text" name="weee[message]" placeholder="... what you wee?">
+  <input type="submit" value="WEEE">
+</form>
+
+<ul>
+  <% @weees.each do |weee| %>
+    <li>
+      <h4><%= weee.username %></h4>
+      <p>
+        <%= weee.message %>
+      </p>
+    </li>
+  <% end %>
+</ul>
